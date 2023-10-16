@@ -38,20 +38,12 @@ function handleClick(event) {
       src="${bigImUrl}"
       alt="${event.target.alt}"
     />`,
-    {
-      onShow: (instance) => {
-        return true;
-      },
-      onClose: (instance) => {
-        return true;
-      },
-    }
+
   );
   instance.show();
   document.addEventListener("keydown", (event) => {
     if (event.code === "Escape" && instance) {
       instance.close();
-      instance = null;
     }
   });
 }
